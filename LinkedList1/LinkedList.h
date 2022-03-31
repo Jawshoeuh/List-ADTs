@@ -12,7 +12,7 @@
 
 #include "LinkedList.h"
 
-typedef LinkedList;
+typedef struct LinkedList LinkedList;
 
 
 /* NewLinkedList
@@ -20,7 +20,7 @@ typedef LinkedList;
  * Simply returns an empty, fresh new linked list.
  * Returns: LinkedList just malloced.
  */
-LinkedList* NewLinkedList(const LL_TYPE value);
+LinkedList *NewLinkedList(const LL_TYPE value);
 
 /* ArrToLinkedList
  * CONSTRUCTOR
@@ -32,7 +32,7 @@ LinkedList* NewLinkedList(const LL_TYPE value);
  *   list[]: used to fill the new linkedlist
  * Returns: LinkedList just malloced with appropriate nodes and pointers.
  */
-LinkedList* ArrToLinkedList(const LL_TYPE list[]);
+LinkedList *ArrToLinkedList(const LL_TYPE list[]);
 
 /* FreeLinkedList
  * DECONSTRUCTOR
@@ -68,7 +68,7 @@ void FreeAllLinkedList(const LinkedList** LL);
  * Precondition: LL is not NULL
  * Returns: The freshly created node.
  */
-LinkedList* AppendLinkedList(const LinkedList* LL, const LL_TYPE value);
+LinkedList *AppendLinkedList(const LinkedList* LL, const LL_TYPE value);
 
 /* InsertAfterLinkedList
  * MANIPULATOR
@@ -79,7 +79,7 @@ LinkedList* AppendLinkedList(const LinkedList* LL, const LL_TYPE value);
  * Precondition: LL is not NULL
  * Returns: The freshly created node.
  */
-LinkedList* InsertAfterLinkedList(LinkedList* LL, const LL_TYPE value);
+LinkedList *InsertAfterLinkedList(LinkedList* LL, const LL_TYPE value);
 
 
 /* DeleteAfterLinkedList
@@ -109,9 +109,9 @@ LL_TYPE ReplaceLinkedList(LinkedList* LL, const LL_TYPE value);
  * Takes:
  *   LL: node to to begin the "journey" to n items away.
  * Precondition: LL is not NULL
- * Returns: Node n items away, NULL if it is unable to jump n spaces.
+ * Returns: Node n nodes away, NULL if it is unable to jump n spaces.
  */
-LinkedList* FindNthLinkedList(const LinkedList* LL, const int n);
+LinkedList *FindNthLinkedList(const LinkedList* LL, const int n);
 
 /* LengthLinkedList
  * ACCESSOR
